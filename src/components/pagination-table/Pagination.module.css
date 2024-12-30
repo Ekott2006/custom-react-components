@@ -1,0 +1,50 @@
+.paginationContainer {
+  text-align: center;
+  margin: 20px auto;
+  width: 80%;
+}
+
+.dataList {
+  list-style: none;
+  padding: 0;
+}
+
+.dataItem {
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.paginationControls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.numberButton {
+  border: 1px solid #007bff;
+  color: black;
+  padding: 10px 15px;
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.pageButton {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.pageButton:disabled {
+  background-color: #d3d3d3;
+  cursor: not-allowed;
+}
+
+.pageIndicator {
+  margin: 0 10px;
+}
