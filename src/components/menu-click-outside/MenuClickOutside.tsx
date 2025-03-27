@@ -5,10 +5,8 @@ const useClickOutside = <T extends HTMLElement,>(handler: () => void) => {
     const ref = useRef<T>(null)
     useEffect(() => {
         const customHandler = (e: MouseEvent) => {
-            console.log(ref.current, e.target);
             if (!ref.current?.contains(e.target as Node)) {
                 handler()
-                console.log("Hello");
             }
         }
         document.addEventListener("mousedown", customHandler)

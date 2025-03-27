@@ -55,7 +55,6 @@ const Form = () => {
         maxLength: 200
       }))} aria-invalid={errors.firstName ? "true" : "false"}
     />
-
     <label><input type="text" {...register("firstName", {})} /></label>
     <button> Submit</button></form >;
 };

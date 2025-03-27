@@ -1,15 +1,21 @@
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Variants } from "motion/react";
-import { BrowserRouter } from "react-router";
 import FormBasic from "./components/form/FormBasic";
 import Header from "./components/header/Header";
 import OTPForm from "./components/otp-form/OTPForm";
-import TableBasic from "./components/table/TableBasic";
 import { queryClient } from "./utils";
 import TableRouter from "./components/table/TableRouter";
 import CustomTableSection from "./components/custom-table/CustomTableSection";
 import Pagination from "./components/pagination-table/PaginationControls";
 import MenuClickOutside from "./components/menu-click-outside/MenuClickOutside";
+import FormList from "./components/form-list/FormList";
+import CustomSelect from "./components/custom-select/CustomSelect";
+import EmailForm from "./components/form/FormValidation";
+import DynamicListSection from "./components/dynamic-list/DynamicListSection.tsx";
+import GlassyHeader from "./components/glassy-header/GlassyHeader.tsx";
+import ChatPageSection from "./components/chat-section/ChatContainer.tsx";
+import NewChatSection from "./components/new-chat-section/NewChatSection.tsx";
+
 const variants: Variants = {
   hidden: {
     opacity: 0,
@@ -63,19 +69,32 @@ const textVariants: Variants = {
 // ];
 const App = () => {
   return (
-      <QueryClientProvider client={queryClient}>
-        <main className="space-y-4">
-          <Header />
-          <FormBasic />
-          {/* <h1 className="text-6xl">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae repellat, consequuntur mollitia molestias sed nemo deleniti accusamus corrupti velit similique voluptates eum nisi aut ut eligendi consequatur reprehenderit perferendis excepturi?</h1>
+    <QueryClientProvider client={queryClient}>
+      <main className="space-y-4">
+        <FormBasic />
+        {/* <Header /> */}
+        {/* <GlassyHeader />
+        <DynamicListSection />
+        <div className="h-[600vh] bg-red-800">
+
+        </div> */}
+        {/* <CustomSelect />
+        <FormBasic /> */}
+        {/* <EmailForm /> */}
+
+        {/* <h1 className="text-6xl">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae repellat, consequuntur mollitia molestias sed nemo deleniti accusamus corrupti velit similique voluptates eum nisi aut ut eligendi consequatur reprehenderit perferendis excepturi?</h1>
         <Carousel items={carouselData} /> */}
-          <OTPForm />
-          <CustomTableSection />
-          <TableRouter />
-          <Pagination />
-          <MenuClickOutside />
-        </main>
-      </QueryClientProvider>
+        {/* <OTPForm />
+        <FormList />
+        <CustomTableSection />
+        <TableRouter />
+        <Pagination />
+        <MenuClickOutside /> */}
+
+        {/* <ChatPageSection /> */}
+        {/* <NewChatSection /> */}
+      </main>
+    </QueryClientProvider>
   );
 };
 
